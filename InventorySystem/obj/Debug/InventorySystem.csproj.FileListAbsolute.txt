@@ -36,3 +36,5 @@ D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.LoginScreen.reso
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.SignUp.resources
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Dashboard.resources
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Form1.resources
+D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.AddProduct.resources
+D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.UpdatePage.resources

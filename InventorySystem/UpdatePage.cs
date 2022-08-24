@@ -9,41 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace InventorySystem
 {
-    public partial class Dashboard : Form
+    public partial class UpdatePage : Form
     {
         private MySqlConnection connection;
         private string server;
         private string database;
         private string uid;
         private string password;
-        public Dashboard()
+        public UpdatePage()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            int pID = Convert.ToInt32(ProdID.Text);
+            string pname = Pname.Text;
+            int price = Convert.ToInt32(Price.Value);
+            //string manuDate = ManuDate.Text;
+            //string manuDate = ManuDate.Value.ToShortDateString();
+            string manuDate = ManuDate.Value.ToString("yyyy-MM-dd");
+            string expiryDate = ExpiryDate.Value.ToString("yyyy-MM-dd");
+            int qnty = Convert.ToInt32(Qnty.Value);
 
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            SignUp signup = new SignUp();
-            signup.ShowDialog();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            AddProduct addProduct = new AddProduct();
-            addProduct.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
             server = "localhost";
             database = "inventorysystem";
             uid = "root";
@@ -54,24 +46,19 @@ namespace InventorySystem
 
             connection = new MySqlConnection(connectionString);
 
-            string query = "SELECT * from `product`";
+            string query = "UPDATE `product` SET `ProductID` = '" + pID + "', `ProductName` = '" + pname + "' ,`Amount` = '" + price + "', `Quantity` = '" + qnty + "' WHERE `product`.`ProductID` = '" + pID + "';";
+
             connection.Open();
             //create command and assign the query and connection from the constructor
             MySqlCommand cmd = new MySqlCommand(query, connection);
 
-            MySqlDataAdapter da = new MySqlDataAdapter();
-            da.SelectCommand = cmd;
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            //Execute command
+            cmd.ExecuteNonQuery();
 
-        }
+            //close connection
+            connection.Close();
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            UpdatePage update = new UpdatePage();
-            update.ShowDialog();
+            MessageBox.Show("Product Updated");
         }
     }
 }

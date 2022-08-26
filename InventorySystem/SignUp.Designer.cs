@@ -40,11 +40,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.Admin = new System.Windows.Forms.RadioButton();
-            this.Attendant = new System.Windows.Forms.RadioButton();
             this.Registerbtn = new System.Windows.Forms.Button();
             this.PhoneNum = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.Admin = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -141,39 +140,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(267, 286);
+            this.label7.Location = new System.Drawing.Point(268, 302);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "UserType";
             // 
-            // Admin
-            // 
-            this.Admin.AutoSize = true;
-            this.Admin.Location = new System.Drawing.Point(342, 286);
-            this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(54, 17);
-            this.Admin.TabIndex = 4;
-            this.Admin.TabStop = true;
-            this.Admin.Text = "Admin";
-            this.Admin.UseVisualStyleBackColor = true;
-            // 
-            // Attendant
-            // 
-            this.Attendant.AutoSize = true;
-            this.Attendant.Location = new System.Drawing.Point(492, 286);
-            this.Attendant.Name = "Attendant";
-            this.Attendant.Size = new System.Drawing.Size(71, 17);
-            this.Attendant.TabIndex = 4;
-            this.Attendant.TabStop = true;
-            this.Attendant.Text = "Attendant";
-            this.Attendant.UseVisualStyleBackColor = true;
-            // 
             // Registerbtn
             // 
-            this.Registerbtn.Location = new System.Drawing.Point(400, 309);
+            this.Registerbtn.Location = new System.Drawing.Point(384, 342);
             this.Registerbtn.Name = "Registerbtn";
-            this.Registerbtn.Size = new System.Drawing.Size(117, 34);
+            this.Registerbtn.Size = new System.Drawing.Size(157, 34);
             this.Registerbtn.TabIndex = 5;
             this.Registerbtn.Text = "Register";
             this.Registerbtn.UseVisualStyleBackColor = true;
@@ -195,14 +172,24 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Phone Number";
             // 
+            // Admin
+            // 
+            this.Admin.FormattingEnabled = true;
+            this.Admin.Items.AddRange(new object[] {
+            "Admin",
+            "Attendant"});
+            this.Admin.Location = new System.Drawing.Point(327, 294);
+            this.Admin.Name = "Admin";
+            this.Admin.Size = new System.Drawing.Size(148, 21);
+            this.Admin.TabIndex = 6;
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Registerbtn);
-            this.Controls.Add(this.Attendant);
+            this.ClientSize = new System.Drawing.Size(800, 403);
             this.Controls.Add(this.Admin);
+            this.Controls.Add(this.Registerbtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
@@ -238,10 +225,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton Admin;
-        private System.Windows.Forms.RadioButton Attendant;
         private System.Windows.Forms.Button Registerbtn;
         private System.Windows.Forms.TextBox PhoneNum;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox Admin;
     }
 }

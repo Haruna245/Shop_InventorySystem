@@ -39,8 +39,8 @@ namespace InventorySystem
             string email = Email.Text;
             string password1 = Password.Text;
             string confpassword = confPassword.Text;
-            string admin = Admin.Text;
-            string attendant = Attendant.Text;
+            string admin = Admin.Text; //usertype initialization
+            //string attendant = Attendant.Text;
             string phnum = PhoneNum.Text;
             
             server = "localhost";
@@ -53,7 +53,7 @@ namespace InventorySystem
 
             connection = new MySqlConnection(connectionString);
 
-            string query = "INSERT INTO `user` (ID,`Fname`, `Lname`, `Password`, `ConfPassword`, `Email`, `PhoneNumber`, `userType`) VALUES(6,'" + Fname + "','" + lname + "','" + password1 + "','" + confpassword + "','" + email + "','" + phnum + "', 'admin')";
+            string query = "INSERT INTO `user` (`Fname`, `Lname`, `Password`, `ConfPassword`, `Email`, `PhoneNumber`, `userType`) VALUES('" + Fname + "','" + lname + "','" + password1 + "','" + confpassword + "','" + email + "','" + phnum + "','" + admin + "')";
 
             //open connection
             connection.Open();

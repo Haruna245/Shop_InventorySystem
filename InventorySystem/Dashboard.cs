@@ -30,14 +30,14 @@ namespace InventorySystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             SignUp signup = new SignUp();
             signup.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             AddProduct addProduct = new AddProduct();
             addProduct.ShowDialog();
         }
@@ -72,6 +72,31 @@ namespace InventorySystem
             //this.Hide();
             UpdatePage update = new UpdatePage();
             update.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

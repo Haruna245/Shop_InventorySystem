@@ -35,6 +35,9 @@ D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.pdb
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.LoginScreen.resources
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.SignUp.resources
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Dashboard.resources
-D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Form1.resources
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.AddProduct.resources
 D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.UpdatePage.resources
+D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Form2.resources
+D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Login.resources
+D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.TillingSc.resources
+D:\C#\InventorySystem\InventorySystem\obj\Debug\InventorySystem.Signin.resources

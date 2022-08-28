@@ -18,7 +18,7 @@ namespace InventorySystem
         {
              Application.EnableVisualStyles();
              Application.SetCompatibleTextRenderingDefault(false);
-             Application.Run(new Form1());
+             Application.Run(new Signin());
             Class1 cs1 = new Class1();
             
             //cs1.Insert();
